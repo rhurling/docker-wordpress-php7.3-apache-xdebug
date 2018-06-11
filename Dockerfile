@@ -10,6 +10,9 @@ RUN yes | pecl install xdebug && \
     echo "xdebug.remote_connect_back = 0" >> /usr/local/etc/php/conf.d/xdebug.ini && \
     echo "xdebug.remote_enable = 1" >> /usr/local/etc/php/conf.d/xdebug.ini && \
     echo "xdebug.remote_handler = \"dbgp\"" >> /usr/local/etc/php/conf.d/xdebug.ini && \
-    echo "xdebug.remote_port = 9000" >> /usr/local/etc/php/conf.d/xdebug.ini
+    echo "xdebug.remote_port = 9000" >> /usr/local/etc/php/conf.d/xdebug.ini && \
+    echo "xdebug.var_display_max_depth = -1" >> /usr/local/etc/php/conf.d/xdebug.ini && \
+    echo "xdebug.var_display_max_children = -1" >> /usr/local/etc/php/conf.d/xdebug.ini && \
+    echo "xdebug.var_display_max_data = -1" >> /usr/local/etc/php/conf.d/xdebug.ini
 
 EXPOSE 9000
